@@ -5,19 +5,19 @@
 ########## Code segment ##########
 .text
 .globl main
-main:
+main: #t = (a+a) - (a+b)
     #Carrega imediatamente 12 em $t0 e 5 em $t1
     li $t0, 12
     li $t1, 5
 
     #Soma $t0 com $t0 e atribui a $s0
-    add $s0, $t0, $t0
+    add $s0, $t0, $t0 # (a+a)
     
     #Soma $t0 com $t1 e atribui a $s1
-    add $s1, $t0, $t1
+    add $s1, $t0, $t1 # (a+b)
     
     #Subtrai $s1 de $s0 e atribui em $s0
-    sub $s0, $s0, $s1
+    sub $s0, $s0, $s1 # t = (a+a) - (a+b)
 
     #Printa a msg
     la $a0, msg

@@ -23,7 +23,7 @@ main:
 
     j exit
 calculeteSum:
-    #Salva o que está em $a0 em $t2
+    #Salva o que está em $a0 em $t2, pois armazenar outro valor em $a0 futuramente
     move $t2, $a0
     
     #Imprime msg

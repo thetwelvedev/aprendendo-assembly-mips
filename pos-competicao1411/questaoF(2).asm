@@ -7,7 +7,7 @@
 		.align 2 #tipo word para interios
 		.space 16 #Array de 4 interios(4bytes * 4 posições) = 16 bytes de espaço na memória principal
 .text
-.globl main
+.globl main #Foi feito depois da competição
 main:
 	move $t0, $zero # i = 0 ->indice que vou usar para pecorrer o array
 	move $t1, $zero #Valor para colocar no array

@@ -1,7 +1,8 @@
 ########## Data segment ##########
 .data
     msg: .asciiz "v1="
-    msg1: .asciiz "\nv2="
+    msg1: .asciiz "v2="
+    virgula: .asciiz ", "
 
 ########## Code segment ##########
 .text
@@ -27,14 +28,15 @@ main:
     li $v0, 1
     syscall 
     
-     
-    
+    #imprimir virgula
+    la $a0, virgula
+    li $v0, 4
+    syscall
+        
     #imprimir msg1
     la $a0, msg1
     li $v0, 4
     syscall
-
-   
 
     #imprimir valor float
     li $v0, 2
